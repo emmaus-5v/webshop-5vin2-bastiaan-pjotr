@@ -9,9 +9,28 @@ CREATE TABLE products (
   name VARCHAR(255),
   description TEXT,
   price NUMERIC(10, 2)
+  Motor_id INTERGER
 );
 
 
+DROP TABLE IF EXISTS Motor; 
+CREATE TABLE Motor (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  name VARCHAR(25),
+);
+
+DROP TABLE IF EXISTS nationaliteit; 
+CREATE TABLE nationaliteit (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  name VARCHAR(25);
+);
+
+DROP TABLE IF EXISTS Motor_nationaliteit; 
+CREATE TABLE Motor_nationaliteit (
+  id INTEGER PRIMARY KEY AUTOINCREMENT,
+  product_id INTEGER,
+  Motor_id INTEGER
+);
 --
 -- populate with data
 --
