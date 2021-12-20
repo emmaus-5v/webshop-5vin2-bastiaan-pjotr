@@ -6,30 +6,58 @@ DROP TABLE IF EXISTS products;
 CREATE TABLE products (
   id INTEGER PRIMARY KEY AUTOINCREMENT,
   code VARCHAR(15),
+  merk INTEGER,
+  kleur TEXT,
+  nationaliteit TEXT,
+  model INTEGER,
+  motor NUMERIC(10, 2),
   name VARCHAR(255),
   description TEXT,
-  price NUMERIC(10, 2),
-  Motor_id INTEGER
+  price NUMERIC(10, 2),  
 );
 
-
-DROP TABLE IF EXISTS Motor; 
-CREATE TABLE Motor (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
-  name VARCHAR(25),
+/* dingen om toetevoegen*/
+DROP TABLE IF EXISTS accesoires; 
+CREATE TABLE accesoires (
+  a_id INTEGER PRIMARY KEY AUTOINCREMENT,
+  a_naam TEXT,
+  a_kleur TEXT,
+  soort INTEGER
 );
 
-DROP TABLE IF EXISTS nationaliteit; 
-CREATE TABLE nationaliteit (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
-  name VARCHAR(25);
+DROP TABLE IF EXISTS uitlaat; 
+CREATE TABLE uitlaat (
+  u_id INTEGER PRIMARY KEY AUTOINCREMENT,
+  u_kleur TEXT,
+  merk TEXT,
+  instalatie_tijd INTEGER
+);
+/* effe dingen splitsen voor logica */
+
+DROP TABLE IF EXISTS uitlaatId_tabel; 
+CREATE TABLE uitlaatId_tabel (
+  ui_id INTEGER PRIMARY KEY AUTOINCREMENT,
+  uitlaat_id INTEGER,
+  merk_soort INTEGER
 );
 
-DROP TABLE IF EXISTS Motor_nationaliteit; 
-CREATE TABLE Motor_nationaliteit (
-  id INTEGER PRIMARY KEY AUTOINCREMENT,
-  product_id INTEGER,
-  Motor_id INTEGER
+DROP TABLE IF EXISTS accesoiresId_tabel; 
+CREATE TABLE accesoiresId_tabel (
+  ac_id INTEGER PRIMARY KEY AUTOINCREMENT,
+  merk_soort INTEGER,
+  accesoires_id INTEGER
+);
+
+DROP TABLE IF EXISTS accesoiressoorten; 
+CREATE TABLE accesoiressoorten (
+  acs_id INTEGER PRIMARY KEY AUTOINCREMENT,
+  acs_naam TEXT
+);
+
+DROP TABLE IF EXISTS model; 
+CREATE TABLE model (
+  g_id INTEGER PRIMARY KEY AUTOINCREMENT,
+  g_naam TEXT
 );
 --
 -- populate with data
