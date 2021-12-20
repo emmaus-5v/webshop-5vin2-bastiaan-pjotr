@@ -8,8 +8,8 @@ CREATE TABLE products (
   code VARCHAR(15),
   name VARCHAR(255),
   description TEXT,
-  price NUMERIC(10, 2)
-  Motor_id INTERGER
+  price NUMERIC(10, 2),
+  Motor_id INTEGER
 );
 
 
@@ -40,9 +40,16 @@ CREATE TABLE Motor_nationaliteit (
 -- want different data? check: https://www.mockaroo.com/910b6c20
 --
 
-insert into products (name, description, code, price) values ('BMW M5', 'Mauris...', '816905633-0', 10.5);
-insert into products (name, description, code, price) values ('Audi rs7', 'Nulla... ', '077030122-3', 11);
-insert into products (name, description, code, price) values ('Mercedes c63s', 'Pellentesque... ', '445924201-X', 13.5);
-insert into products (name, description, code, price) values ('Dodge Charger', 'Duis bibendum...', '693155505-7', 13.5);
-insert into products (name, description, code, price) values ('Porsche Panemera', 'Nulla... ', '492662523-7', 14);
+insert into products (name, description, code, price) values ('BMW M5', 'Mauris...', '816905633-0', 10.5, 1);
+insert into products (name, description, code, price) values ('Audi rs7', 'Nulla... ', '077030122-3', 11, 2);
+insert into products (name, description, code, price) values ('Mercedes c63s', 'Pellentesque... ', '445924201-X', 13.5, 3);
+insert into products (name, description, code, price) values ('Dodge Charger', 'Duis bibendum...', '693155505-7', 13.5, 3);
+insert into products (name, description, code, price) values ('Porsche Panemera', 'Nulla... ', '492662523-7', 14, 1);
 
+insert into products (name) values ('v8')
+insert into products (name) values ('v10')
+insert into products (name) values ('v6')
+
+insert into products (name) values ('duits')
+insert into products (name) values ('engels')
+insert into products (name) values ('amerikaans')
