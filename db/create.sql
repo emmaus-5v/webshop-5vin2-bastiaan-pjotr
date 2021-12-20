@@ -59,6 +59,20 @@ CREATE TABLE model (
   g_id INTEGER PRIMARY KEY AUTOINCREMENT,
   g_naam TEXT
 );
+
+DROP TABLE IF EXISTS uitlaatsoorten;
+CREATE TABLE uitlaatsoorten (
+uis_id INTEGER PRIMARY KEY AUTOINCREMENT,
+uis_naam TEXT
+);
+
+DROP TABLE IF EXISTS merksoorten;
+CREATE TABLE accesoiresoorten (
+acs_id INTEGER PRIMARY KEY AUTOINCREMENT,
+acs_naam TEXT
+);
+
+
 --
 -- populate with data
 --
