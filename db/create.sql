@@ -81,7 +81,7 @@ acs_naam TEXT
 --
 -- want different data? check: https://www.mockaroo.com/910b6c20
 --
-
+/* nu alles erin zetten jippie */
 insert into products (name, description, code, price) values ('BMW M5', 'Mauris...', '816905633-0', 10.5, 1);
 insert into products (name, description, code, price) values ('Audi rs7', 'Nulla... ', '077030122-3', 11, 2);
 insert into products (name, description, code, price) values ('Mercedes c63s', 'Pellentesque... ', '445924201-X', 13.5, 3);
