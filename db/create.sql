@@ -56,8 +56,8 @@ CREATE TABLE accesoiressoorten (
 
 DROP TABLE IF EXISTS model; 
 CREATE TABLE model (
-  g_id INTEGER PRIMARY KEY AUTOINCREMENT,
-  g_naam TEXT
+  m_id INTEGER PRIMARY KEY AUTOINCREMENT,
+  m_naam TEXT
 );
 
 DROP TABLE IF EXISTS uitlaatsoorten;
@@ -66,10 +66,10 @@ uis_id INTEGER PRIMARY KEY AUTOINCREMENT,
 uis_naam TEXT
 );
 
-DROP TABLE IF EXISTS merksoorten;
-CREATE TABLE accesoiresoorten (
-acs_id INTEGER PRIMARY KEY AUTOINCREMENT,
-acs_naam TEXT
+DROP TABLE IF EXISTS merksoort;
+CREATE TABLE merksoort (
+merk_id INTEGER PRIMARY KEY AUTOINCREMENT,
+merk_naam TEXT
 );
 
 
@@ -82,14 +82,14 @@ acs_naam TEXT
 -- want different data? check: https://www.mockaroo.com/910b6c20
 --
 /* nu alles erin zetten jippie */
-insert into products (name, description, code, price, merk, kleur, nationaliteit, motor) values ('BMW M5', 'Mauris...', '816905633-0', 10.5, 1, duits, v8);
-insert into products (name, description, code, price, merk, kleur, nationaliteit, motor) values ('Audi rs7', 'Nulla... ', '077030122-3', 11, 2, duits, v8 );
-insert into products (name, description, code, price, merk, kleur, nationaliteit, motor) values ('Mercedes c63s', 'Pellentesque... ', '445924201-X', 13.5, 3, duits, v8);
-insert into products (name, description, code, price, merk, kleur, nationaliteit, motor) values ('Dodge Charger', 'Duis bibendum...', '693155505-7', 13.5, 4, amerikaans, v8);
-insert into products (name, description, code, price, merk, kleur, nationaliteit, motor) values ('Porsche Panemera', 'Nulla... ', '492662523-7', 14, 5, duits, v10);
-insert into products (name, description, code, price, merk, kleur, nationaliteit, motor) values ('Porsche Panemera', 'Nulla... ', '492662523-7', 14, 5, duits, v10);
-insert into products (name, description, code, price, merk, kleur, nationaliteit, motor) values ('Porsche Panemera', 'Nulla... ', '492662523-7', 14, 5, duits, v10);
-insert into products (name, description, code, price, merk, kleur, nationaliteit, motor) values ('Porsche Panemera', 'Nulla... ', '492662523-7', 14, 5, duits, v10);
+insert into products (name, description, code, price, merk, kleur, nationaliteit, model, motor) values ('M5', 'Mauris...', '816905633-0', 10.5, 2, duits, v8);
+insert into products (name, description, code, price, merk, kleur, nationaliteit, model, motor) values ('rs7', 'Nulla... ', '077030122-3', 11, 1, duits, v8 );
+insert into products (name, description, code, price, merk, kleur, nationaliteit, model, motor) values ('c63s', 'Pellentesque... ', '445924201-X', 13.5, 3, duits, v8);
+insert into products (name, description, code, price, merk, kleur, nationaliteit, model, motor) values ('Charger', 'Duis bibendum...', '693155505-7', 13.5, 5, amerikaans, v8);
+insert into products (name, description, code, price, merk, kleur, nationaliteit, model, motor) values ('Panemera', 'Nulla... ', '492662523-7', 14, 4, duits, v10);
+insert into products (name, description, code, price, merk, kleur, nationaliteit, model, motor) values ('rs3', 'Nulla... ', '492662523-7', 14, 1, duits, v10);
+insert into products (name, description, code, price, merk, kleur, nationaliteit, model, motor) values ('a45', 'Nulla... ', '492662523-7', 14, 3, duits, v10);
+insert into products (name, description, code, price, merk, kleur, nationaliteit, model, motor) values ('gt2rs', 'Nulla... ', '492662523-7', 14, 4, duits, v10);
 
 insert into accesoires (a_naam, a_kleur, soort) values ('Spoiler', 'zwart', 1);
 insert into accesoires (a_naam, a_kleur, soort) values ('LED lampen', 'RBG', 2);  
@@ -108,17 +108,25 @@ insert into uitlaatsoorten (uis_naam) values ('Akraapovic');
 insert into uitlaatsoorten (uis_naam)) values ('Armytrix');
 insert into uitlaatsoorten (uis_naam) values ('Milltek');
 
-insert into uitlaatId_tabel (auto_merk, uitlaat_merk) values (1, 2);
-insert into uitlaatId_tabel (auto_merk, uitlaat_merk) values (1, 2);
-insert into uitlaatId_tabel (auto_merk, uitlaat_merk) values (1, 7);
-insert into uitlaatId_tabel (auto_merk, uitlaat_merk) values (2, 2);
-insert into uitlaatId_tabel (auto_merk, uitlaat_merk) values (2, 3);
-insert into uitlaatId_tabel (auto_merk, uitlaat_merk) values (2, 7);
-insert into uitlaatId_tabel (auto_merk, uitlaat_merk) values (3, 1);
-insert into uitlaatId_tabel (auto_merk, uitlaat_merk) values (3, 4);
-insert into uitlaatId_tabel (auto_merk, uitlaat_merk) values (4, 4);
-insert into uitlaatId_tabel (auto_merk, uitlaat_merk) values (5, 3);
-insert into uitlaatId_tabel (auto_merk, uitlaat_merk) values (6, 7);
-insert into uitlaatId_tabel (auto_merk, uitlaat_merk) values (7, NULL);
-insert into uitlaatId_tabel (auto_merk, uitlaat_merk) values (8, 1);
-insert into uitlaatId_tabel (auto_merk, uitlaat_merk) values (8, 2);
+
+/*nog effe naar dit kijken bas met die gekke n:m en 1:n dingen*/
+insert into uitlaatId_tabel (auto_merk, uitlaat_merk) values (1, );
+insert into uitlaatId_tabel (auto_merk, uitlaat_merk) values (1, );
+insert into uitlaatId_tabel (auto_merk, uitlaat_merk) values (2, );
+insert into uitlaatId_tabel (auto_merk, uitlaat_merk) values (2, );
+insert into uitlaatId_tabel (auto_merk, uitlaat_merk) values (3, );
+insert into uitlaatId_tabel (auto_merk, uitlaat_merk) values (3, );
+
+insert into model (m_naam) values('sedan');
+insert into model (m_naam) values('coupe');
+insert into model (m_naam) values('hatchback');
+
+insert into accesoiressoorten (acs_naam) values('visuele onderdelen');
+insert into accesoiressoorten (acs_naam) values('verlichting');
+insert into accesoiressoorten (acs_naam) values('motor upgrades');
+
+insert into merksoort (merk_naam) values('audi')
+insert into merksoort (merk_naam) values('bmw')
+insert into merksoort (merk_naam) values('mercedes')
+insert into merksoort (merk_naam) values('porsche')
+insert into merksoort (merk_naam) values('dodge')
