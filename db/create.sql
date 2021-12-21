@@ -13,7 +13,7 @@ CREATE TABLE products (
   motor NUMERIC(10, 2),
   name VARCHAR(255),
   description TEXT,
-  price NUMERIC(10, 2),  
+  price NUMERIC(10, 2)  
 );
 
 /* dingen om toetevoegen*/
@@ -29,7 +29,7 @@ DROP TABLE IF EXISTS uitlaat;
 CREATE TABLE uitlaat (
   u_id INTEGER PRIMARY KEY AUTOINCREMENT,
   u_kleur TEXT,
-  merk TEXT,
+  u_merk TEXT,
   instalatie_tijd INTEGER
 );
 /* effe dingen splitsen voor logica */
@@ -82,16 +82,25 @@ acs_naam TEXT
 -- want different data? check: https://www.mockaroo.com/910b6c20
 --
 /* nu alles erin zetten jippie */
-insert into products (name, description, code, price) values ('BMW M5', 'Mauris...', '816905633-0', 10.5, 1);
-insert into products (name, description, code, price) values ('Audi rs7', 'Nulla... ', '077030122-3', 11, 2);
-insert into products (name, description, code, price) values ('Mercedes c63s', 'Pellentesque... ', '445924201-X', 13.5, 3);
-insert into products (name, description, code, price) values ('Dodge Charger', 'Duis bibendum...', '693155505-7', 13.5, 3);
-insert into products (name, description, code, price) values ('Porsche Panemera', 'Nulla... ', '492662523-7', 14, 1);
+insert into products (name, description, code, price, merk, kleur, nationaliteit, motor) values ('BMW M5', 'Mauris...', '816905633-0', 10.5, 1, duits, v8);
+insert into products (name, description, code, price, merk, kleur, nationaliteit, motor) values ('Audi rs7', 'Nulla... ', '077030122-3', 11, 2, duits, v8 );
+insert into products (name, description, code, price, merk, kleur, nationaliteit, motor) values ('Mercedes c63s', 'Pellentesque... ', '445924201-X', 13.5, 3, duits, v8);
+insert into products (name, description, code, price, merk, kleur, nationaliteit, motor) values ('Dodge Charger', 'Duis bibendum...', '693155505-7', 13.5, 4, amerikaans, v8);
+insert into products (name, description, code, price, merk, kleur, nationaliteit, motor) values ('Porsche Panemera', 'Nulla... ', '492662523-7', 14, 5, duits, v10);
+insert into products (name, description, code, price, merk, kleur, nationaliteit, motor) values ('Porsche Panemera', 'Nulla... ', '492662523-7', 14, 5, duits, v10);
+insert into products (name, description, code, price, merk, kleur, nationaliteit, motor) values ('Porsche Panemera', 'Nulla... ', '492662523-7', 14, 5, duits, v10);
+insert into products (name, description, code, price, merk, kleur, nationaliteit, motor) values ('Porsche Panemera', 'Nulla... ', '492662523-7', 14, 5, duits, v10);
 
-insert into products (name) values ('v8')
-insert into products (name) values ('v10')
-insert into products (name) values ('v6')
+insert into accesoires (a_naam, a_kleur, soort) values ('Spoiler', 'zwart', 1);
+insert into accesoires (a_naam, a_kleur, soort) values ('LED lampen', 'RBG', 2);  
+insert into accesoires (a_naam, a_kleur, soort) values ('voorlampen', 'wit', 2); 
+insert into accesoires (a_naam, a_kleur, soort) values ('achterlampen', 'rood', 2);
+insert into accesoires (a_naam, a_kleur, soort) values ('turbo', 'grijs', 3);  
+insert into accesoires (a_naam, a_kleur, soort) values ('supercharger', 'grijs', 3); 
+insert into accesoires (a_naam, a_kleur, soort) values ('Front splitter', 'zwart', 1);
+insert into accesoires (a_naam, a_kleur, soort) values ('defuser', 'zwart', 1);
 
-insert into products (name) values ('duits')
-insert into products (name) values ('engels')
-insert into products (name) values ('amerikaans')
+insert into uitlaat (u_merk, u_kleur, instalatie_tijd) values ('Akeapovic', 'zwart', 60);
+insert into uitlaat (u_merk, u_kleur, instalatie_tijd) values ('Armyytrix', 'groen', 60);
+insert into uitlaat (u_merk, u_kleur, instalatie_tijd) values ('Milltek', 'zwart', 70);
+
