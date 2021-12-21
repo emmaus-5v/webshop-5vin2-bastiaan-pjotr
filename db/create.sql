@@ -83,13 +83,13 @@ merk_naam TEXT
 --
 /* nu alles erin zetten jippie */
 insert into products (name, description, code, price, merk, kleur, nationaliteit, model, motor) values ('M5', 'Een enorm sportieve rear wheel drive auto die een enorme hoeveelheid horsepower creert en ook zeker op de lange stukken enorm snel kan gaan', '816905633-0', 10.5, 2,"blauw", 'duits', 1, 'v10');
-insert into products (name, description, code, price, merk, kleur, nationaliteit, model, motor) values ('rs7', 'Nulla... ', '077030122-3', 11, 1,'grijs', 'duits', 1, 'v8');
-insert into products (name, description, code, price, merk, kleur, nationaliteit, model, motor) values ('c63s', 'Pellentesque... ', '445924201-X', 13.5, 3,"blauw", 'duits', 1, 'v8');
-insert into products (name, description, code, price, merk, kleur, nationaliteit, model, motor) values ('Charger', 'Duis bibendum...', '693155505-7', 13.5, 5,"oranje", 'amerikaans', 1, 'v8');
-insert into products (name, description, code, price, merk, kleur, nationaliteit, model, motor) values ('Panemera', 'Nulla... ', '492662523-7', 14, 4,"rood", 'duits', 1, 'v8');
-insert into products (name, description, code, price, merk, kleur, nationaliteit, model, motor) values ('rs3', 'Nulla... ', '492662523-7', 14, 1,"groen", 'duits', 3, 'v5');
-insert into products (name, description, code, price, merk, kleur, nationaliteit, model, motor) values ('a45', 'Nulla... ', '492662523-7', 14, 3, "wit", 'duits', 3, 'v4');
-insert into products (name, description, code, price, merk, kleur, nationaliteit, model, motor) values ('gt2rs', 'Nulla... ', '492662523-7', 14, 4,"grijs met zwarte strepen", 'duits', 2, 'F6');
+insert into products (name, description, code, price, merk, kleur, nationaliteit, model, motor) values ('rs7', 'Een erg sportieve sedan met veel ruimte uitgerust met een 581 hp sterke motor ook goeie AWD zodat u alle seizoenen op weg kunt', '077030122-3', 11, 1,'grijs', 'duits', 1, 'v8');
+insert into products (name, description, code, price, merk, kleur, nationaliteit, model, motor) values ('c63s', 'Of u nou een CEO bent of een jochie die plezier wilt hebben het kan allemaal in deze luxe uitgeruste mercedes.', '445924201-X', 13.5, 3,"blauw", 'duits', 1, 'v8');
+insert into products (name, description, code, price, merk, kleur, nationaliteit, model, motor) values ('Charger', 'Een echte Amerikaanse bak die gevaarlijk snel kan op de rechte stukken maar in de bochten levensgevaarlijk kan zijn met de RWD en de uitlaat brult als een echt monster', '693155505-7', 13.5, 5,"oranje", 'amerikaans', 1, 'v8');
+insert into products (name, description, code, price, merk, kleur, nationaliteit, model, motor) values ('Panemera', 'De auto waarmee u wilt gezien worden hip sportief en veel uitstraling laat het geld rollen netzoals deze wielen over de weg doen', '492662523-7', 14, 4,"rood", 'duits', 1, 'v8');
+insert into products (name, description, code, price, merk, kleur, nationaliteit, model, motor) values ('rs3', 'Een klein wagentje maar zeker niet te onderschatten in de bochten zal die er zeker iedreen uit rijden en ook nog is een mooie vorm voor een goeie prijs', '492662523-7', 14, 1,"groen", 'duits', 3, 'v5');
+insert into products (name, description, code, price, merk, kleur, nationaliteit, model, motor) values ('a45s', 'Luxe, klein, goeie prijs, betrouwbaar, ik beschrijf nu een echte droom auto maar het is gewoon een mercedes die zeker wel wat meer aandacht verdient', '492662523-7', 14, 3, "wit", 'duits', 3, 'v4');
+insert into products (name, description, code, price, merk, kleur, nationaliteit, model, motor) values ('gt2rs', 'De auto die gevreesd is. hij heeft het nurgenberg track record op zijn naam staan en is dus enorm snel maar niet te hard gaan want boetes zijn enorm duur', '492662523-7', 14, 4,"grijs met zwarte strepen", 'duits', 2, 'F6');
 
 insert into accesoires (a_naam, a_kleur, soort) values ('Spoiler', 'zwart', 1);
 insert into accesoires (a_naam, a_kleur, soort) values ('LED lampen', 'RBG', 2);  
