@@ -125,8 +125,8 @@ insert into accesoiressoorten (acs_naam) values('visuele onderdelen');
 insert into accesoiressoorten (acs_naam) values('verlichting');
 insert into accesoiressoorten (acs_naam) values('motor upgrades');
 
-insert into merksoort (merk_naam) values('audi')
-insert into merksoort (merk_naam) values('bmw')
-insert into merksoort (merk_naam) values('mercedes')
-insert into merksoort (merk_naam) values('porsche')
-insert into merksoort (merk_naam) values('dodge')
+insert into merksoort (merk_naam) values('audi');
+insert into merksoort (merk_naam) values('bmw');
+insert into merksoort (merk_naam) values('mercedes');
+insert into merksoort (merk_naam) values('porsche');
+insert into merksoort (merk_naam) values('dodge');
