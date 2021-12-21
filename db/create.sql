@@ -37,14 +37,14 @@ CREATE TABLE uitlaat (
 DROP TABLE IF EXISTS uitlaatId_tabel; 
 CREATE TABLE uitlaatId_tabel (
   ui_id INTEGER PRIMARY KEY AUTOINCREMENT,
-  uitlaat_id INTEGER,
-  merk_soort INTEGER
+  auto_merk INTEGER,
+  uitlaat_merk INTEGER
 );
 
 DROP TABLE IF EXISTS accesoiresId_tabel; 
 CREATE TABLE accesoiresId_tabel (
   ac_id INTEGER PRIMARY KEY AUTOINCREMENT,
-  merk_soort INTEGER,
+  auto_merk INTEGER,
   accesoires_id INTEGER
 );
 
@@ -100,7 +100,25 @@ insert into accesoires (a_naam, a_kleur, soort) values ('supercharger', 'grijs',
 insert into accesoires (a_naam, a_kleur, soort) values ('Front splitter', 'zwart', 1);
 insert into accesoires (a_naam, a_kleur, soort) values ('defuser', 'zwart', 1);
 
-insert into uitlaat (u_merk, u_kleur, instalatie_tijd) values ('Akeapovic', 'zwart', 60);
-insert into uitlaat (u_merk, u_kleur, instalatie_tijd) values ('Armyytrix', 'groen', 60);
-insert into uitlaat (u_merk, u_kleur, instalatie_tijd) values ('Milltek', 'zwart', 70);
+insert into uitlaat (u_merk, u_kleur, instalatie_tijd) values (1, 'zwart', 60);
+insert into uitlaat (u_merk, u_kleur, instalatie_tijd) values (2, 'groen', 60);
+insert into uitlaat (u_merk, u_kleur, instalatie_tijd) values (3, 'zwart', 70);
 
+insert into uitlaatsoorten (uis_naam) values ('Akraapovic');
+insert into uitlaatsoorten (uis_naam)) values ('Armytrix');
+insert into uitlaatsoorten (uis_naam) values ('Milltek');
+
+insert into uitlaatId_tabel (auto_merk, uitlaat_merk) values (1, 2);
+insert into uitlaatId_tabel (auto_merk, uitlaat_merk) values (1, 2);
+insert into uitlaatId_tabel (auto_merk, uitlaat_merk) values (1, 7);
+insert into uitlaatId_tabel (auto_merk, uitlaat_merk) values (2, 2);
+insert into uitlaatId_tabel (auto_merk, uitlaat_merk) values (2, 3);
+insert into uitlaatId_tabel (auto_merk, uitlaat_merk) values (2, 7);
+insert into uitlaatId_tabel (auto_merk, uitlaat_merk) values (3, 1);
+insert into uitlaatId_tabel (auto_merk, uitlaat_merk) values (3, 4);
+insert into uitlaatId_tabel (auto_merk, uitlaat_merk) values (4, 4);
+insert into uitlaatId_tabel (auto_merk, uitlaat_merk) values (5, 3);
+insert into uitlaatId_tabel (auto_merk, uitlaat_merk) values (6, 7);
+insert into uitlaatId_tabel (auto_merk, uitlaat_merk) values (7, NULL);
+insert into uitlaatId_tabel (auto_merk, uitlaat_merk) values (8, 1);
+insert into uitlaatId_tabel (auto_merk, uitlaat_merk) values (8, 2);
