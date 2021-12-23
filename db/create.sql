@@ -125,9 +125,13 @@ insert into merksoort (merk_naam) values('porsche');
 insert into merksoort (merk_naam) values('dodge');
 
 /*nog effe naar dit kijken bas met die gekke n:m en 1:n dingen*/
-insert into uitlaatId_tabel (auto_merk, uitlaat_merk) values (1 );
-insert into uitlaatId_tabel (auto_merk, uitlaat_merk) values (1 );
-insert into uitlaatId_tabel (auto_merk, uitlaat_merk) values (2 );
-insert into uitlaatId_tabel (auto_merk, uitlaat_merk) values (2 );
-insert into uitlaatId_tabel (auto_merk, uitlaat_merk) values (3 );
-insert into uitlaatId_tabel (auto_merk, uitlaat_merk) values (3 );
+insert into uitlaatId_tabel (auto_merk, uitlaat_merk) values (1, 2);
+insert into uitlaatId_tabel (auto_merk, uitlaat_merk) values (1, 3);
+insert into uitlaatId_tabel (auto_merk, uitlaat_merk) values (2, 1);
+insert into uitlaatId_tabel (auto_merk, uitlaat_merk) values (2, 3);
+insert into uitlaatId_tabel (auto_merk, uitlaat_merk) values (3, 1);
+insert into uitlaatId_tabel (auto_merk, uitlaat_merk) values (3, 2);
+insert into uitlaatId_tabel (auto_merk, uitlaat_merk) values (3, 3);
+insert into uitlaatId_tabel (auto_merk, uitlaat_merk) values (4, 2);
+insert into uitlaatId_tabel (auto_merk, uitlaat_merk) values (4, 3);
+insert into uitlaatId_tabel (auto_merk, uitlaat_merk) values (5, 1);
