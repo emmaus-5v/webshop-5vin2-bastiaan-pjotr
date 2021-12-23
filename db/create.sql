@@ -93,6 +93,7 @@ insert into products (name, description, code, price, merk, kleur, nationaliteit
 insert into products (name, description, code, price, merk, kleur, nationaliteit, model, motor) values ('M4', 'Een enorm getunde sport wagen en ook erg bekend onder zakenmannen en street races door zzijn ligte en confortabele interieur', '492662523-7', 128000, 4,"zwart", 'duits', 2, 'v6');
 insert into products (name, description, code, price, merk, kleur, nationaliteit, model, motor) values ('challenger', 'sta je bij het stop ligt en zie je deze auto naast je staan en je denkt deze boot race ik er makkelijk uit Tip: niet doen deze wagen is enorm snel op de rechte lijnen', '492662523-7', 135000, 4,"rood", 'duits', 2, 'v8');
 
+/*accesoires informatie*/
 insert into accesoires (a_naam, a_kleur, soort) values ('Spoiler', 'zwart', 1);
 insert into accesoires (a_naam, a_kleur, soort) values ('LED lampen', 'RBG', 2);  
 insert into accesoires (a_naam, a_kleur, soort) values ('voorlampen', 'wit', 2); 
@@ -102,29 +103,34 @@ insert into accesoires (a_naam, a_kleur, soort) values ('supercharger', 'grijs',
 insert into accesoires (a_naam, a_kleur, soort) values ('Front splitter', 'zwart', 1);
 insert into accesoires (a_naam, a_kleur, soort) values ('defuser', 'zwart', 1);
 
+/*uitlaat informatie*/
 insert into uitlaat (u_merk, u_kleur, instalatie_tijd) values (1, 'zwart', 60);
 insert into uitlaat (u_merk, u_kleur, instalatie_tijd) values (2, 'groen', 60);
 insert into uitlaat (u_merk, u_kleur, instalatie_tijd) values (3, 'zwart', 70);
 
+/*uitlaat merken*/
 insert into uitlaatsoorten (uis_naam) values ('Akraapovic');
 insert into uitlaatsoorten (uis_naam) values ('Armytrix');
 insert into uitlaatsoorten (uis_naam) values ('Milltek');
 
+/*modellen*/
 insert into model (m_naam) values('sedan');
 insert into model (m_naam) values('coupe');
 insert into model (m_naam) values('hatchback');
 
+/*soorten accesoiressen*/
 insert into accesoiressoorten (acs_naam) values('visuele onderdelen');
 insert into accesoiressoorten (acs_naam) values('verlichting');
 insert into accesoiressoorten (acs_naam) values('motor upgrades');
 
+/*merk auto's*/
 insert into merksoort (merk_naam) values('audi');
 insert into merksoort (merk_naam) values('bmw');
 insert into merksoort (merk_naam) values('mercedes');
 insert into merksoort (merk_naam) values('porsche');
 insert into merksoort (merk_naam) values('dodge');
 
-/*nog effe naar dit kijken bas met die gekke n:m en 1:n dingen*/
+/*welke uitlaat kan op welke auto*/
 insert into uitlaatId_tabel (auto_merk, uitlaat_merk) values (1, 2);
 insert into uitlaatId_tabel (auto_merk, uitlaat_merk) values (1, 3);
 insert into uitlaatId_tabel (auto_merk, uitlaat_merk) values (2, 1);
@@ -135,3 +141,25 @@ insert into uitlaatId_tabel (auto_merk, uitlaat_merk) values (3, 3);
 insert into uitlaatId_tabel (auto_merk, uitlaat_merk) values (4, 2);
 insert into uitlaatId_tabel (auto_merk, uitlaat_merk) values (4, 3);
 insert into uitlaatId_tabel (auto_merk, uitlaat_merk) values (5, 1);
+
+/* welke accesoires op welke auto kan*/
+insert into accesoiresId_tabel(auto_merk, accesoires_id) values (1, 1);
+insert into accesoiresId_tabel(auto_merk, accesoires_id) values (1, 2);
+insert into accesoiresId_tabel(auto_merk, accesoires_id) values (1, 3);
+insert into accesoiresId_tabel(auto_merk, accesoires_id) values (1, 4);
+insert into accesoiresId_tabel(auto_merk, accesoires_id) values (1, 5);
+insert into accesoiresId_tabel(auto_merk, accesoires_id) values (2, 4);
+insert into accesoiresId_tabel(auto_merk, accesoires_id) values (2, 8);
+insert into accesoiresId_tabel(auto_merk, accesoires_id) values (2, 2);
+insert into accesoiresId_tabel(auto_merk, accesoires_id) values (3, 1);
+insert into accesoiresId_tabel(auto_merk, accesoires_id) values (3, 3);
+insert into accesoiresId_tabel(auto_merk, accesoires_id) values (3, 7);
+insert into accesoiresId_tabel(auto_merk, accesoires_id) values (3, 2);
+insert into accesoiresId_tabel(auto_merk, accesoires_id) values (4, 1);
+insert into accesoiresId_tabel(auto_merk, accesoires_id) values (4, 3);
+insert into accesoiresId_tabel(auto_merk, accesoires_id) values (4, 5);
+insert into accesoiresId_tabel(auto_merk, accesoires_id) values (4, 6);
+insert into accesoiresId_tabel(auto_merk, accesoires_id) values (5, 1);
+insert into accesoiresId_tabel(auto_merk, accesoires_id) values (5, 2);
+insert into accesoiresId_tabel(auto_merk, accesoires_id) values (5, 3);
+insert into accesoiresId_tabel(auto_merk, accesoires_id) values (5, 6);
