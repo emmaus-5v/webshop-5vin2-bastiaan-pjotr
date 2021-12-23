@@ -82,8 +82,8 @@ merk_naam TEXT
 -- want different data? check: https://www.mockaroo.com/910b6c20
 --
 /* nu alles erin zetten jippie */
-insert into products (name, description, code, price, merk, kleur, nationaliteit, model, motor) values ('M5', 'Een enorm sportieve rear wheel drive auto die een enorme hoeveelheid horsepower creert en ook zeker op de lange stukken enorm snel kan gaan', '816905633-0', 37000 , 2,"blauw", 'duits', 1, 'v10');
-insert into products (name, description, code, price, merk, kleur, nationaliteit, model, motor) values ('rs7', 'Een erg sportieve sedan met veel ruimte uitgerust met een 581 hp sterke motor ook goeie AWD zodat u alle seizoenen op weg kunt', '077030122-3', , 199950,'grijs', 'duits', 1,  'v8');
+insert into products (name, description, code, price, merk, kleur, nationaliteit, model, motor) values ('M5', 'Een enorm sportieve rear wheel drive auto die een enorme hoeveelheid horsepower creert en ook zeker op de lange stukken enorm snel kan gaan', '816905633-0', 37000 , 2,"zwart", 'duits', 1, 'v10');
+insert into products (name, description, code, price, merk, kleur, nationaliteit, model, motor) values ('rs7', 'Een erg sportieve sedan met veel ruimte uitgerust met een 581 hp sterke motor ook goeie AWD zodat u alle seizoenen op weg kunt', '077030122-3', 199950, 2,'grijs', 'duits', 1,  'v8');
 insert into products (name, description, code, price, merk, kleur, nationaliteit, model, motor) values ('c63s', 'Of u nou een CEO bent of een jochie die plezier wilt hebben het kan allemaal in deze luxe uitgeruste mercedes.', '445924201-X', 12561, 3,"blauw", 'duits', 1, 'v8');
 insert into products (name, description, code, price, merk, kleur, nationaliteit, model, motor) values ('Charger', 'Een echte Amerikaanse bak die gevaarlijk snel kan op de rechte stukken maar in de bochten levensgevaarlijk kan zijn met de RWD en de uitlaat brult als een echt monster', '693155505-7', 80000, 5,"oranje", 'amerikaans', 1, 'v8');
 insert into products (name, description, code, price, merk, kleur, nationaliteit, model, motor) values ('Panemera', 'De auto waarmee u wilt gezien worden hip sportief en veel uitstraling laat het geld rollen netzoals deze wielen over de weg doen', '492662523-7', 118000, 4,"rood", 'duits', 1, 'v8');
@@ -91,7 +91,7 @@ insert into products (name, description, code, price, merk, kleur, nationaliteit
 insert into products (name, description, code, price, merk, kleur, nationaliteit, model, motor) values ('a45s', 'Luxe, klein, goeie prijs, betrouwbaar, ik beschrijf nu een echte droom auto maar het is gewoon een mercedes die zeker wel wat meer aandacht verdient', '492662523-7', 70000, 3, "wit", 'duits', 3, 'v4');
 insert into products (name, description, code, price, merk, kleur, nationaliteit, model, motor) values ('gt2rs', 'De auto die gevreesd is. hij heeft het nurgenberg track record op zijn naam staan en is dus enorm snel maar niet te hard gaan want boetes zijn enorm duur', '492662523-7', 389900, 4,"grijs met zwarte strepen", 'duits', 2, 'F6');
 insert into products (name, description, code, price, merk, kleur, nationaliteit, model, motor) values ('M4', 'Een enorm getunde sport wagen en ook erg bekend onder zakenmannen en street races door zzijn ligte en confortabele interieur', '492662523-7', 128000, 4,"zwart", 'duits', 2, 'v6');
-insert into products (name, description, code, price, merk, kleur, nationaliteit, model, motor) values ('challenger', 'sta je bij het stop ligt en zie je deze auto naast je staan en je denkt deze boot race ik er makkelijk uit Tip: niet doen deze wagen is enorm snel op de rechte lijnen', '492662523-7', 135.000, 4,"rood", 'duits', 2, 'v8');
+insert into products (name, description, code, price, merk, kleur, nationaliteit, model, motor) values ('challenger', 'sta je bij het stop ligt en zie je deze auto naast je staan en je denkt deze boot race ik er makkelijk uit Tip: niet doen deze wagen is enorm snel op de rechte lijnen', '492662523-7', 135000, 4,"rood", 'duits', 2, 'v8');
 
 insert into accesoires (a_naam, a_kleur, soort) values ('Spoiler', 'zwart', 1);
 insert into accesoires (a_naam, a_kleur, soort) values ('LED lampen', 'RBG', 2);  
@@ -110,15 +110,6 @@ insert into uitlaatsoorten (uis_naam) values ('Akraapovic');
 insert into uitlaatsoorten (uis_naam) values ('Armytrix');
 insert into uitlaatsoorten (uis_naam) values ('Milltek');
 
-
-/*nog effe naar dit kijken bas met die gekke n:m en 1:n dingen*/
-insert into uitlaatId_tabel (auto_merk, uitlaat_merk) values (1 );
-insert into uitlaatId_tabel (auto_merk, uitlaat_merk) values (1 );
-insert into uitlaatId_tabel (auto_merk, uitlaat_merk) values (2 );
-insert into uitlaatId_tabel (auto_merk, uitlaat_merk) values (2 );
-insert into uitlaatId_tabel (auto_merk, uitlaat_merk) values (3 );
-insert into uitlaatId_tabel (auto_merk, uitlaat_merk) values (3 );
-
 insert into model (m_naam) values('sedan');
 insert into model (m_naam) values('coupe');
 insert into model (m_naam) values('hatchback');
@@ -132,3 +123,11 @@ insert into merksoort (merk_naam) values('bmw');
 insert into merksoort (merk_naam) values('mercedes');
 insert into merksoort (merk_naam) values('porsche');
 insert into merksoort (merk_naam) values('dodge');
+
+/*nog effe naar dit kijken bas met die gekke n:m en 1:n dingen*/
+insert into uitlaatId_tabel (auto_merk, uitlaat_merk) values (1 );
+insert into uitlaatId_tabel (auto_merk, uitlaat_merk) values (1 );
+insert into uitlaatId_tabel (auto_merk, uitlaat_merk) values (2 );
+insert into uitlaatId_tabel (auto_merk, uitlaat_merk) values (2 );
+insert into uitlaatId_tabel (auto_merk, uitlaat_merk) values (3 );
+insert into uitlaatId_tabel (auto_merk, uitlaat_merk) values (3 );
